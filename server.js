@@ -6,7 +6,7 @@ const PORT=9090;
 
 //We need a function which handles requests and send response
 function handleRequest(request, response){
-    response.end('It Works!! Current time is: ' + Date().getTime());
+    response.end('It Works!! Current time is: ' + Date.now() );
 }
 
 //Create a server
