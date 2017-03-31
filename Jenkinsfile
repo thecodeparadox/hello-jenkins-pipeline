@@ -10,7 +10,7 @@ pipeline {
 		stage("Run App") {
 			steps {
 				echo "Restarting the App"
-				sh "pm2 gracefulReload TestNodeServer"
+				sh "pm2 reload TestNodeServer"
 			}
 		}
 		stage("DONE") {
