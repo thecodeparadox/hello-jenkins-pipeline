@@ -6,3 +6,15 @@ describe('Array', function() {
 		});
 	});
 });
+
+describe('Check Global APP_HOST_TYPE from Jenkinsfile', function() {
+	it('process.env.APP_HOST_TYPE should exists', function() {
+	  	assert.equal(process.env.APP_HOST_TYPE, 'local');
+	});
+});
+
+describe('Test Mocha Testing ENV from Jenkinsfile', function() {
+	it('process.env.APP_HOST_TESTING should exists', function() {
+	  	assert.equal(process.env.APP_HOST_TESTING, 'MOCHA_TEST');
+	});
+});
