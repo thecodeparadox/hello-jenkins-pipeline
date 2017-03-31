@@ -1,19 +1,21 @@
 pipeline {
 	agent any
 	stages {
-		stage("Stage 1") {
+		stage("Mocha Unit Test") {
 			steps {
-				echo "Stage 1 complete"
+				echo "Doing testing..."
+				sh "npm test"
 			}
 		}
-		stage("Stage 2") {
+		stage("Run App") {
 			steps {
-				echo "Stage 2 complete"
+				echo "Restarting the App"
+				sh "npm restart"
 			}
 		}
-		stage("Stage 3") {
+		stage("DONE") {
 			steps {
-				echo "Stage 3 complete"
+				echo "Seems All OKK!!"
 			}
 		}
 	}
