@@ -1,0 +1,23 @@
+{
+  "name": "hello-jenkins-pipeline",
+  "version": "1.0.0",
+  "description": "Jenkins testing",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodeparadox/hello-jenkins-pipeline.git"
+  },
+  "author": "Abdullah Yousuf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecodeparadox/hello-jenkins-pipeline/issues"
+  },
+  "homepage": "https://github.com/thecodeparadox/hello-jenkins-pipeline#readme",
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
+}
