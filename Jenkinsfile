@@ -1,5 +1,6 @@
 pipeline {
 	stages {
+		agent any
 		stage("Stage 1") {
 			steps {
 				echo "Stage 1 complete"
