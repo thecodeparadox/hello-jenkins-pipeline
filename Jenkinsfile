@@ -26,18 +26,10 @@ pipeline {
 			echo "Current Build has changes."
 		}
 		success {
-			echo "All Build and deployment succeed! :-)"
+			echo "All Build and deployment succeed!"
 		}
 		always {
 			echo "I will run every time!!"
-			mail to: 'dabdullahy@gmail.com',
-	             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-	             body: "Something is wrong with ${env.BUILD_URL}"
 		}
-		failure {
-	        mail to: 'dabdullahy@gmail.com',
-	             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-	             body: "Something is wrong with ${env.BUILD_URL}"
-	    }
 	}
 }
