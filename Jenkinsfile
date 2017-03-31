@@ -7,13 +7,10 @@ pipeline {
 				sh "npm test"
 			}
 		}
-		stage("Run App") {
-			steps {
-				echo "Restarting the App"
-				sh "pm2 reload TestNodeServer"
-			}
-		}
 		stage("DONE") {
+			environment {
+                APP_HOST_TYPE = 'local'
+            }
 			steps {
 				echo "Seems All OKK!!"
 			}
