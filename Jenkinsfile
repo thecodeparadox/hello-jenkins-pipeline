@@ -5,6 +5,11 @@ pipeline {
 				echo "Stage 1 complete"
 			}
 		}
+		stage("Stage 2") {
+			steps {
+				echo "Stage 2 complete"
+			}
+		}
 	}
 
 	post {
