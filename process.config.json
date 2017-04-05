@@ -1,0 +1,19 @@
+{
+    apps : [{
+        name        : "ProdataRtbApi",
+        script      : "./server.js",
+        watch       : false,
+        instances   : 0,
+        node_args   : "--max_old_space_size=4096",
+        exec_mode   : "cluster",
+        error_file  : "traffic-err.log",
+        out_file    : "traffic-out.log",
+        autorestart : true,
+        env: {
+          NODE_ENV  : "development"
+        },
+        env_production : {
+           NODE_ENV : "production"
+        }
+    }]
+}
