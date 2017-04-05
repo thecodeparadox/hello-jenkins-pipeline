@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage ("System Checking:") {
             steps {
+                sh "echo $PATH"
                 sh "git --version"
                 sh "node --version"
                 sh "pm2 -v"
