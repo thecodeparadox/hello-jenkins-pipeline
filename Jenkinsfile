@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage ("Git Sync and Deploy:") {
             steps {
-                sh "bash deploy.sh"
+                try {
+                    sh "bash deploy.sh"
+                } catch(error) {
+                    throw error
+                }
             }
         }
     }
