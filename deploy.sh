@@ -1,11 +1,11 @@
-#printf "\nGit pulling...\n"
-#git pull origin master
+printf "\nGit pulling...\n"
+git pull origin master
 
-#if [ $? -eq 0 ]; then
-#    printf "\nGit Pull Done.\n"
-#else
-#    printf "\nGit Pull Failed.\n"
-#fi
+if [ $? -eq 0 ]; then
+    printf "\nGit Pull Done.\n"
+else
+    printf "\nGit Pull Failed.\n"
+fi
 
 printf "\nLast 3 Git logs:\n"
 git log --pretty=oneline | head -n 3
