@@ -1,7 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage ("Git Sync and Deploy:") {
+        stage ("System Checking:") {
+            steps {
+                sh "git --version"
+                sh "node --version"
+                sh "pm2 -v"
+            }
+        }
+        stage ("Build and Deploy App:") {
             steps {
                 sh "bash deploy.sh"
             }
@@ -9,7 +16,7 @@ pipeline {
     }
     post {
         success {
-            echo "Build successful. Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            echo "Build successful. Running Build# ${env.BUILD_ID} on ${env.JENKINS_URL}."
         }
         failure {
             echo "Deployment failed"
