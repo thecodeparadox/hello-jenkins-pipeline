@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage ("System Checking:") {
             steps {
+                echo "${env}"
                 sh "echo $PATH"
                 sh "git --version"
                 sh "node --version"
